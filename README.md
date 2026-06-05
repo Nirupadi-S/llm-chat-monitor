@@ -181,6 +181,11 @@ A single Express service was used to reduce complexity and improve development s
 
 ---
 
+
+
+<img width="1920" height="1080" alt="Screenshot (297)" src="https://github.com/user-attachments/assets/dcb0e091-9d57-4f5d-b4f1-c7bf5f9992ba" />
+
+
 ## Author
 
 Nirupadi S B
