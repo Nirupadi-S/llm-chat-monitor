@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function Logs() {
-
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
@@ -11,14 +10,11 @@ function Logs() {
 
   const fetchLogs = async () => {
     try {
-
-      const response =
-        await axios.get(
-          "http://axios.post("https://llm-chat-monitor.onrender.com/conversations")/logs"
-        );
+      const response = await axios.get(
+        "https://llm-chat-monitor.onrender.com/logs"
+      );
 
       setLogs(response.data);
-
     } catch (error) {
       console.log(error);
     }
@@ -26,7 +22,6 @@ function Logs() {
 
   return (
     <div style={{ padding: "20px" }}>
-
       <h2>Inference Logs</h2>
 
       <table
@@ -34,11 +29,9 @@ function Logs() {
         cellPadding="10"
         style={{
           width: "100%",
-          borderCollapse:
-            "collapse",
+          borderCollapse: "collapse",
         }}
       >
-
         <thead>
           <tr>
             <th>ID</th>
@@ -51,41 +44,18 @@ function Logs() {
         </thead>
 
         <tbody>
-
           {logs.map((log) => (
-
             <tr key={log.id}>
-
               <td>{log.id}</td>
-
-              <td>
-                {log.provider}
-              </td>
-
-              <td>
-                {log.model}
-              </td>
-
-              <td>
-                {log.latency} ms
-              </td>
-
-              <td>
-                {log.status}
-              </td>
-
-              <td>
-                {log.created_at}
-              </td>
-
+              <td>{log.provider}</td>
+              <td>{log.model}</td>
+              <td>{log.latency} ms</td>
+              <td>{log.status}</td>
+              <td>{log.created_at}</td>
             </tr>
-
           ))}
-
         </tbody>
-
       </table>
-
     </div>
   );
 }
