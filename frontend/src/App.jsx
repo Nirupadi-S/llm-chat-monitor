@@ -34,7 +34,7 @@ function App() {
 
         const response =
           await axios.get(
-            "http://localhost:5000/conversations"
+            "http://axios.post("https://llm-chat-monitor.onrender.com/conversations")/conversations"
           );
 
         setConversations(
@@ -64,7 +64,7 @@ function App() {
 
         const response =
           await axios.get(
-            `http://localhost:5000/messages/${conversationId}`
+            `http://axios.post("https://llm-chat-monitor.onrender.com/conversations")/messages/${conversationId}`
           );
 
         const formatted =
@@ -97,7 +97,7 @@ function App() {
 
         const response =
           await axios.post(
-            "http://localhost:5000/conversations",
+            "http://axios.post("https://llm-chat-monitor.onrender.com/conversations")/conversations",
             {
               title:
                 `Chat ${Date.now()}`
@@ -153,7 +153,7 @@ function App() {
 
         const response =
           await axios.post(
-            "http://localhost:5000/chat",
+            "http://axios.post("https://llm-chat-monitor.onrender.com/conversations")/chat",
             {
               message:
                 currentMessage,

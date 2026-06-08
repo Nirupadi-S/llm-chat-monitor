@@ -14,7 +14,7 @@ function Logs() {
 
       const response =
         await axios.get(
-          "http://localhost:5000/logs"
+          "http://axios.post("https://llm-chat-monitor.onrender.com/conversations")/logs"
         );
 
       setLogs(response.data);
