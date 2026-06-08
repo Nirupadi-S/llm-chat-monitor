@@ -1,7 +1,21 @@
 require("dotenv").config();
 
+console.log("=================================");
+console.log("OPENROUTER KEY:");
+console.log(process.env.OPENROUTER_API_KEY);
+console.log("=================================");
+
 const express = require("express");
 const cors = require("cors");
+
+
+//require("dotenv").config();
+
+
+
+
+// const express = require("express");
+// const cors = require("cors");
 
 const db = require("./database");
 
