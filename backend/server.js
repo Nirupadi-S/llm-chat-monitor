@@ -1,9 +1,9 @@
 require("dotenv").config();
 
-console.log("=================================");
-console.log("OPENROUTER KEY:");
-console.log(process.env.OPENROUTER_API_KEY);
-console.log("=================================");
+// console.log("=================================");
+// console.log("OPENROUTER KEY:");
+// console.log(process.env.OPENROUTER_API_KEY);
+// console.log("=================================");
 
 const express = require("express");
 const cors = require("cors");
@@ -224,8 +224,8 @@ app.post("/chat", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log(
-    "Server running on port 5000"
-  );
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const API_URL = "https://llm-chat-backend-0k8e.onrender.com";
+
 function Logs() {
   const [logs, setLogs] = useState([]);
 
@@ -11,7 +13,7 @@ function Logs() {
   const fetchLogs = async () => {
     try {
       const response = await axios.get(
-        "https://llm-chat-monitor.onrender.com/logs"
+        `${API_URL}/logs`
       );
 
       setLogs(response.data);
